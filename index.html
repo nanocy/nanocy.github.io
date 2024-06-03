@@ -3,10 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>nanocy</title>
+    <link rel="icon” href=“/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/ic.JPG">
+    <style>
+        .body {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 0, 149);
+            font-size: 16px;
+            font-style: italic;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .site-title{ font-size: 3.4rem;
+                     font-style: italic;
+                     letter-spacing: .1em;
+                     color: #fff;
+                     text-shadow: -4px 3px 0 rgb(255, 0, 149), -8px 6px 0 #000000;}
+                     .balloon2 {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+}
+
+.balloon2:before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  margin-left: -15px;
+  border: 12px solid transparent;
+  border-top: 12px solid #FFF;
+  z-index: 2;
+}
+
+.balloon2:after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -17px;
+  border: 14px solid transparent;
+  border-top: 14px solid #555;
+  z-index: 1;
+}
+
+.balloon2 p {
+  margin: 0;
+  padding: 0;
+}
+        .p1 {font-size: 16px;}
+        .p2 {font-size: 20px;}
+        .ic1{width: 150px;
+            height: auto;
+        }
+        .button-like {
+            width: 100px;
+            height: auto;
+            border: 2px solid rgb(255, 255, 255); /* 枠線の色と太さ */
+            border-radius: 5px; /* 角を丸くする */
+            padding: 10px; /* 内側の余白 */
+            background-color: rgb(0, 0, 0); /* 背景色 */
+            transition: transform 0.2s; /* アニメーション */
+        }
+        .dq-window-1 {
+  background-color: black;
+  padding: 0.15rem;
+  width: fit-content;
+}
+
+.dq-window-2 {
+  background-color: white;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  width: fit-content;
+}
+
+.dq-window-3 {
+  color: white;
+  background-color: black;
+  font-family: "misaki_gothic_2nd";
+  border-radius: 0.3rem;
+  padding: 1.0rem 0.75rem;
+  line-height: 2;
+  width: fit-content;
+}
+
+        .button-like:hover {
+            transform: scale(1.05); /* ホバー時に拡大 */
+        }
+    </style>
 </head>
-<body>
-    <h1>こんにちは、世界！</h1>
-    <p>これは私のGitHub Pagesサイトです。</p>
+<body class="body">
+    <header class="header">
+        <h1 class="site-title">nanocy</h1>
+    </header>
+
+    <div class="dq-window-1"
+  style="margin-left: auto;
+  margin-right: auto;">
+  <div class="dq-window-2">
+    <div class="dq-window-3">
+      ▼ 「あ！やせいの
+      <br>なのしーがとびだしてきた！
+    </div>
+  </div>
+</div>
+
+    <div class="balloon2">
+        <p>アイコンはオカメインコのくうちゃん</p>
+    </div>
+    
+    <img src="ic.JPG" class="ic1">
+    <p>▼RG name : napi</p>
+    <p class = p2>▼ 慶應義塾大学 総合政策学部 </p>
+    <p class = p2>▼ 徳田・村井合同研究室
+    <a href="https://rg.sfc.keio.ac.jp/">SFC-RG</a></p>
+    <p class = p2>▼ 中澤・大越研究会 
+    <a href="https://d-hacks.jn.sfc.keio.ac.jp/">d-hacks</a>所属</p>
+    <p>
+        <a href="https://twitter.com/nanocydayo"><img src="logo-white.png" alt="Twitter" style="width: 30px; height: auto;"class="button-like"></a>
+        <a href="https://instagram.com/nanosfc_777"><img src="Instagram_Glyph_Gradient.png" alt="Twitter" style="width: 30px; height: auto;"class="button-like"></a>
+        <a href="https://sizu.me/nanopiyo"><img src="sizu-pc.webp" alt="Twitter" style="width: 30px; height: auto;"class="button-like"></a>
+        <a href="https://github.com/nanocy"><img src="github-mark-white.png" alt="Twitter" style="width: 30px; height: auto;"class="button-like"></a>
+    </p>
 </body>
 </html>
