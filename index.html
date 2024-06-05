@@ -5,26 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nanocy</title>
-    <link rel="icon” href=“/favicon.ico">
+    <link rel="icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/ic.JPG">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        .body {
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
             background-color: rgb(0, 0, 0);
             color: rgb(255, 0, 149);
             font-size: 16px;
             font-family: "Press Start 2P", system-ui;
             font-weight: 400;
             font-style: normal;
+        }
+
+        .header {
+            width: 100%;
+            box-sizing: border-box;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
         .site-title {
@@ -35,7 +46,22 @@
             letter-spacing: .1em;
             color: #fff;
             text-shadow: -4px 3px 0 rgb(255, 0, 149), -8px 6px 0 #000000;
-            
+            white-space: nowrap;
+            overflow: visible;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
         }
 
         .balloon2 {
@@ -84,7 +110,6 @@
             font-family: "Press Start 2P", system-ui;
             font-weight: 400;
             font-style: normal;
-
         }
 
         .p2 {
@@ -92,15 +117,16 @@
             font-family: "Press Start 2P", system-ui;
             font-weight: 400;
             font-style: normal;
-
+            text-align: center;
         }
 
         .ic1 {
-            width: 150px;
+            max-width: 150px;
             height: auto;
         }
+
         .ic2 {
-            width: 450px;
+            max-width: 300px;
             height: auto;
         }
 
@@ -108,15 +134,10 @@
             width: 100px;
             height: auto;
             border: 2px solid rgb(255, 255, 255);
-            /* 枠線の色と太さ */
             border-radius: 5px;
-            /* 角を丸くする */
             padding: 10px;
-            /* 内側の余白 */
             background-color: rgb(0, 0, 0);
-            /* 背景色 */
             transition: transform 0.2s;
-            /* アニメーション */
         }
 
         .dq-window-1 {
@@ -138,7 +159,6 @@
             font-family: "Press Start 2P", system-ui;
             font-weight: 400;
             font-style: normal;
-
             border-radius: 0.3rem;
             padding: 1.0rem 0.75rem;
             line-height: 2;
@@ -147,78 +167,69 @@
 
         .button-like:hover {
             transform: scale(1.05);
-
-            /* ホバー時に拡大 */
-
-        
         }
+
         @media (max-width: 480px) {
-                .site-title {
-                    font-size: 1.8rem;
-                    white-space: normal;
-                }
-                .p3{
-                    font-size: 12px;
-                }
-
-                .p2 {
-                    font-size: 15px;
-                }
-
-                .button-like {
-                    width: 60px;
-                    padding: 6px;
-                }
-
-                .ic1 {
-                    width: 80px;
-                }
+            .site-title {
+                font-size: 1.8rem;
+                white-space: normal;
             }
-        
+
+            .p3 {
+                font-size: 12px;
+            }
+
+            .p2 {
+                font-size: 15px;
+            }
+
+            .button-like {
+                width: 60px;
+                padding: 6px;
+            }
+
+            .ic1 {
+                max-width: 80px;
+            }
+        }
     </style>
 </head>
 
-<body class="body">
+<body>
     <header class="header">
         <h1 class="site-title">nanocy</h1>
     </header>
 
-    <div class="dq-window-1" style="margin-left: auto;
-  margin-right: auto;">
-        <div class="dq-window-2">
-            <div class="dq-window-3">
-                ▼ A wild Nanocy
-                <br>appeared!
+    <div class="content">
+        <div class="dq-window-1">
+            <div class="dq-window-2">
+                <div class="dq-window-3">
+                    ▼ A wild Nanocy
+                    <br>appeared!
+                </div>
             </div>
         </div>
+
+        <div class="balloon2">
+            <p>Hello World!</p>
+        </div>
+
+        <img src="ic-art.PNG" class="ic1">
+        <p class="p3">▼ RG name : napi</p>
+        <p class="p2">▼ keio SFC </p>
+        <p class="p2">▼ Arts in Policy Management </p>
+        <p class="p2">▼ Murai Lab.</p>
+        <p class="p2"><a href="https://rg.sfc.keio.ac.jp/">SFC-RG</a></p>
+        <p class="p2">▼ Nakazawa & Okoshi Lab.</p>
+        <p class="p2"><a href="https://d-hacks.jn.sfc.keio.ac.jp/">d-hacks</a></p>
+        <img src="taka-hd.png" class="ic2">
+        <p>
+            <a href="https://twitter.com/nanocydayo"><img src="logo-white.png" alt="Twitter" style="width: 30px; height: auto;" class="button-like"></a>
+            <a href="https://instagram.com/nanocydayo"><img src="Instagram_Glyph_Gradient.png" alt="Instagram" style="width: 30px; height: auto;" class="button-like"></a>
+            <a href="https://sizu.me/nanopiyo"><img src="sizu-pc.webp" alt="Sizu" style="width: 30px; height: auto;" class="button-like"></a>
+            <a href="https://github.com/nanocy"><img src="github-mark-white.png" alt="GitHub" style="width: 30px; height: auto;" class="button-like"></a>
+        </p>
     </div>
-
-    <div class="balloon2">
-        <p>Hello World!</p>
-    </div>
-
-    <img src="ic-art.PNG" class="ic1">
-    <p class =p3>▼ RG name : napi</p>
-    <p class=p2>▼ keio SFC </p>
-    <p class=p2>▼ Arts in Policy Management </p>
-    <p class=p2>▼ Murai Lab.</p>
-    <p class=p2><a href="https://rg.sfc.keio.ac.jp/">SFC-RG</a>
-    </p>
-    <p class=p2>▼ Nakazawa & Okoshi Lab.</p>
-    <p class=p2> <a href="https://d-hacks.jn.sfc.keio.ac.jp/">d-hacks</a>
-    </p>
-    <img src="taka-hd.png" class="ic2">
-    <p>
-
-        <a href="https://twitter.com/nanocydayo"><img src="logo-white.png" alt="Twitter"
-                style="width: 30px; height: auto;" class="button-like"></a>
-        <a href="https://instagram.com/nanocydayo"><img src="Instagram_Glyph_Gradient.png" alt="Twitter"
-                style="width: 30px; height: auto;" class="button-like"></a>
-        <a href="https://sizu.me/nanopiyo"><img src="sizu-pc.webp" alt="Twitter" style="width: 30px; height: auto;"
-                class="button-like"></a>
-        <a href="https://github.com/nanocy"><img src="github-mark-white.png" alt="Twitter"
-                style="width: 30px; height: auto;" class="button-like"></a>
-    </p>
 </body>
 
 </html>
